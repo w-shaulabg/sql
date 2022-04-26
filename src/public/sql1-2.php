@@ -7,4 +7,5 @@ $sql = "SELECT * FROM spendings";
 $statement = $pdo->prepare($sql);
 $statement->execute();
 $spendings = $statement->fetchAll(PDO::FETCH_ASSOC);
+var_dump($spendings);
 ?>

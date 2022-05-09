@@ -8,12 +8,12 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 $amount = $statement->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($amount);
+
 //die;
 $sum = 0;
 foreach ($amount as $data) {
   $sum += $data['amount'];
 }
-
 
 echo "incomesテーブルのamountカラムの合計:" . $sum;
 

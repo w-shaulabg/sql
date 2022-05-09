@@ -3,7 +3,7 @@ $dbUserName = "root";
 $dbPassword = "password";
 $pdo = new PDO("mysql:host=mysql; dbname=tq_quest; charset=utf8", $dbUserName, $dbPassword);
 
-$sql = "SELECT amount FROM incomes ";
+$sql = "SELECT amount FROM spendings ";
 $statement = $pdo->prepare($sql);
 $statement->execute();
 $amount = $statement->fetchAll(PDO::FETCH_ASSOC);

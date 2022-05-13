@@ -9,11 +9,9 @@ $statement->execute();
 $orange_num = $statement->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($apple_num);
 
-
 rsort($orange_num);
 foreach ($orange_num as $key => $val) {
    var_dump($val);
 }
-
 
 ?>

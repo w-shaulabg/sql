@@ -11,7 +11,6 @@ $peach_num = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 rsort($peach_num);
 foreach ($peach_num as $key => $val) {
-
    var_dump($val);
 }
 

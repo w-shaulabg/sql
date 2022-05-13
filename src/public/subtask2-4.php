@@ -11,9 +11,8 @@ $peach_num = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 //die;
 $sum = 0;
-foreach($peach_num as $data)
-{
-$sum += $data['peach_num'];
+foreach ($peach_num as $data) {
+   $sum += $data['peach_num'];
 }
 var_dump($sum);
 //echo $sum;

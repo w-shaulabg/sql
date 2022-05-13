@@ -11,8 +11,7 @@ $banana_num = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 //die;
 $sum = 0;
-foreach($banana_num as $data)
-{
+foreach($banana_num as $data){
 $sum += $data['banana_num'];
 }
 var_dump($sum);

@@ -13,5 +13,4 @@ rsort($peach_num);
 foreach ($peach_num as $key => $val) {
    var_dump($val);
 }
-
 ?>

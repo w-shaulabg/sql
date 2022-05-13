@@ -13,5 +13,4 @@ rsort($banana_num);
 foreach ($banana_num as $key => $val) {
    var_dump($val);
 }
-
 ?>

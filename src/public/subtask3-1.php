@@ -13,5 +13,4 @@ rsort($apple_num);
 foreach ($apple_num as $key => $val) {
    var_dump($val);
 }
-
 ?>

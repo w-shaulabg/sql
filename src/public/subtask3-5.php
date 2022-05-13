@@ -13,5 +13,4 @@ rsort($lemon_num);
 foreach ($lemon_num as $key => $val) {
    var_dump($val);
 }
-
 ?>

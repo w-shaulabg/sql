@@ -13,5 +13,4 @@ rsort($orange_num);
 foreach ($orange_num as $key => $val) {
    var_dump($val);
 }
-
 ?>

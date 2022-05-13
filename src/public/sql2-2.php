@@ -11,7 +11,8 @@ $amount = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 //die;
 $sum = 0;
-foreach ($amount as $data) {
+foreach ($amount as $data)
+{
   $sum += $data['amount'];
 }
 

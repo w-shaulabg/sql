@@ -8,7 +8,7 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 $apples = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$oddIdApples = [];//データベースから取得したものを新たに配列として作る
+$oddIdApples = [];//データベースから取得したものを新たに配列として作る。
 foreach ($apples as $apple) {
   /*echo"<pre>";
   var_dump($apple);

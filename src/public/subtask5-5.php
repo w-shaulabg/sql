@@ -7,18 +7,16 @@ $sql = "SELECT * FROM sample5";
 $statement = $pdo->prepare($sql);
 $statement -> execute();
 $lemons = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 //var_dump($lemons);
-
 //die;
 $oddIdLemons = [];
-foreach ($lemons as $lemon){
-  if ($lemon['id'] % 2  == 1){
+foreach ($lemons as $lemon) {
+  if ($lemon['id'] % 2  == 1) {
     $oddIdLemons[] = $lemon['lemon_num'];
   }
 }
-echo"<pre>";
+echo "<pre>";
 var_dump($oddIdLemons);
-echo"<pre>";
+echo "<pre>";
 
 ?>

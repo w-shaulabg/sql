@@ -5,7 +5,7 @@ $pdo = new PDO("mysql:host=mysql; dbname=tq_quest; charset=utf8", $dbUserName, $
 
 $sql = "SELECT * FROM sample2";
 $statement = $pdo->prepare($sql);
-$statement -> execute();
+$statement->execute();
 $bananas = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $oddIdBananas = [];

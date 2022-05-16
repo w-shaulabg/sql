@@ -8,9 +8,13 @@ $statement = $pdo->prepare($sql);
 $statement->execute();
 $apple_num = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-sort($apple_num);
-foreach ($apple_num as $key =>$val) {
-   var_dump($val);
+sort ($apple_num);
+$oddIdApples = [];
+foreach ($apple_num as $apples =>$apple) {
+   $oddIdApples = $apple['apple_num'];
+   echo "<pre>";
+   echo $oddIdApples; //var_dump($oddIdApples);
+   echo "<pre>";
 }
 
 ?>

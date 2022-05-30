@@ -25,7 +25,8 @@ echo "<pre>";
 $less_than_5_thousand_yen = [];
 foreach ($users as $user) {
   if ($user['money_in_possession'] < 5000) {
-    $less_than_5_thousand_yen[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $less_than_5_thousand_yen[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";

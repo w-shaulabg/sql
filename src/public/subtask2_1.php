@@ -16,40 +16,40 @@ foreach ($users as $user) {                         //$usersのままでは全�
 		$tokyoUsers[] = $user['name'],                  //$tokyoUsers多次元配列に$userの出身地を格納。
  		$tokyoUsers[] = $user['birth_place'],           //$tokyoUsers多次元配列に４userの所持金を格納。
  		$tokyoUsers[] = $user['money_in_possession']    //今回必要な所持金を配列に格納。
- 		];
+ 	  ];
  	}
- }
- 	echo "<pre>";
-	echo "東京都出身者の氏名及び所持金" . "\n" ;
-	var_dump($TokyoUsers); 
-	echo "<pre>";
+}
+echo "<pre>";
+echo "東京都出身者の氏名及び所持金" . "\n" ;
+var_dump($TokyoUsers); 
+echo "<pre>";
 
 
-	$hokkaidoUsers = [];
+$hokkaidoUsers = [];
 
-	foreach ($users as $user) {
-		if($user['birth_place'] === '北海道') {
-			$HokkaidoUsers[] = [
-			$hokkaidoUsers[] = $user['name'],
-			$hokkaidoUsers[] = $user['birth_place'],
-			$hokkaidoUsers[] = $user['money_in_possession']
-			];
-		}
+foreach ($users as $user) {
+	if ($user['birth_place'] === '北海道') {
+		$HokkaidoUsers[] = [
+		$hokkaidoUsers[] = $user['name'],
+		$hokkaidoUsers[] = $user['birth_place'],
+		$hokkaidoUsers[] = $user['money_in_possession']
+		];
 	}
-	echo "<pre>";
-	echo "北海道出身者の氏名及び所持金" . "\n";
-	var_dump($HokkaidoUsers);
-	echo "<pre>";
+}
+echo "<pre>";
+echo "北海道出身者の氏名及び所持金" . "\n";
+var_dump($HokkaidoUsers);
+echo "<pre>";
  
 $tibakenUsers = [];
 
 foreach ($users as $user) {
 	if ($user['birth_place'] === '千葉県') {
-			$TibakenUsers[] = [
-			$tibakenUsers[] = $user['name'],
-			$tibakenUsers[] = $user['birth_place'],
-			$tibakenUsers[] = $user['money_in_possession']
-		];
+		$TibakenUsers[] = [
+		$tibakenUsers[] = $user['name'],
+		$tibakenUsers[] = $user['birth_place'],
+		$tibakenUsers[] = $user['money_in_possession']
+	  ];
 	}
 }
 echo "<pre>";

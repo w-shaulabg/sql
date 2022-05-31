@@ -12,7 +12,10 @@ $users = $statement->fetchAll(PDO::FETCH_ASSOC);
 $five_thousand_yen_or_more = [];
 foreach ($users as $user) {
   if ($user['money_in_possession'] >= 5000) {
-    $five_thousand_yen_or_more[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']
+    $five_thousand_yen_or_more[] = [
+      $user['name'] , 
+      $user['birth_place'] , 
+      $user['money_in_possession']
     ];
   }
 }
@@ -25,7 +28,10 @@ echo "<pre>";
 $less_than_5_thousand_yen = [];
 foreach ($users as $user) {
   if ($user['money_in_possession'] < 5000) {
-    $less_than_5_thousand_yen[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']
+    $less_than_5_thousand_yen[] = [
+      $user['name'] , 
+      $user['birth_place'] , 
+      $user['money_in_possession']
     ];
   }
 }
@@ -38,7 +44,10 @@ echo "<pre>";
 $money_even_number = [];
 foreach ($users as $user) {
   if ($user['money_in_possession'] %2 === 0) {
-    $money_even_number[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']
+    $money_even_number[] = [
+      $user['name'] , 
+      $user['birth_place'] , 
+      $user['money_in_possession']
     ];
   }
 }

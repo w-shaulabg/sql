@@ -12,7 +12,11 @@ $more_five_thousand = [];
 foreach ($users as $user) {
   if ($user['birth_place'] === '東京都' 
     && $user['money_in_possession'] >= 5000) {
-    $more_five_thousand[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $more_five_thousand[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";
@@ -25,7 +29,11 @@ $under_five_thousand = [];
 foreach ($users as $user) {
   if ($user['birth_place'] === '東京都' 
     && $user['money_in_possession'] < 5000) {
-    $under_five_thousand[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $under_five_thousand[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";
@@ -36,9 +44,13 @@ echo "<pre>";
 
 $prefecture_ken = [];
 foreach ($users as $user) {
-  if (preg_match("/県/" , $user['birth_place']) 
+  if (preg_match("/県/", $user['birth_place']) 
     && $user['money_in_possession'] %2 == 0) {
-    $prefecture_ken[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $prefecture_ken[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";
@@ -49,9 +61,13 @@ echo "<pre>";
 
 $prefecture_lessKen = [];
 foreach ($users as $user) {
-  if (is_bool(preg_match("/県/" , $user['birth_place'])) !== false 
+  if (is_bool(preg_match("/県/", $user['birth_place'])) !== false 
     && $user['money_in_possession'] %2 == 1) {
-    $prefecture_lessKen[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $prefecture_lessKen[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 if (count($prefecture_lessKen) === 0) {
@@ -65,9 +81,13 @@ echo "<pre>";
 
 $nameTaEven = [];
 foreach ($users as $user) {
-  if (preg_match("/田/" , $user['name']) 
+  if (preg_match("/田/", $user['name']) 
     && $user['money_in_possession'] %2 == 0) {
-    $nameTaEven[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $nameTaEven[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";
@@ -78,9 +98,13 @@ echo "<pre>";
 
 $nameTaOdd = [];
 foreach ($users as $user) {
-  if (preg_match("/田/" , $user['name']) 
+  if (preg_match("/田/", $user['name']) 
     && $user['money_in_possession'] %2 == 1) {
-    $nameTaOdd[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $nameTaOdd[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 if (count($nameTaOdd) == 0) {
@@ -95,10 +119,14 @@ echo "<pre>";
 
 $nameRiver_fiveThousand = [];
 foreach ($users as $user) {
-  if (preg_match("/川/" , $user['name']) 
+  if (preg_match("/川/", $user['name']) 
     && $user['birth_place'] === '東京都' 
     && $user['money_in_possession'] >= 5000) {
-    $nameRiver_fiveThousand[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $nameRiver_fiveThousand[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";
@@ -109,10 +137,14 @@ echo "<pre>";
 
 $nameMoto_threeThousand = [];
 foreach ($users as $user) {
-  if (preg_match("/本/" , $user['name']) 
-    && preg_match("/県/" , $user['birth_place']) 
+  if (preg_match("/本/", $user['name']) 
+    && preg_match("/県/", $user['birth_place']) 
     && $user['money_in_possession']  < 3000) {
-    $nameMoto_threeThousand[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $nameMoto_threeThousand[] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 echo "<pre>";
@@ -123,10 +155,16 @@ echo "<pre>";
 
 $nameFujiYamaTa = [];
 foreach ($users as $user) {
-  if ((preg_match("/藤/" , $user['name']) || preg_match("/山/" , $user['name']) || preg_match("/田/" , $user['name']))
-    && preg_match("/県/" , $user['birth_place']) == false 
+  if ((preg_match("/藤/",$user['name'])
+    || preg_match("/山/",$user['name'])
+    || preg_match("/田/",$user['name']))
+    && preg_match("/県/", $user['birth_place']) == false 
     && $user['money_in_possession']  >= 5000) {
-    $nameFujiYamaTa [] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+    $nameFujiYamaTa [] = [
+      $user['name'],
+      $user['birth_place'],
+      $user['money_in_possession']
+    ];
   }
 }
 
@@ -138,11 +176,14 @@ echo "<pre>";
 
 $nameKawaYamaMura = [];
 foreach ($users as $user) {
-  if (!(preg_match("/川/" , $user['name']) || preg_match("/山/" , $user['name']) || preg_match("/村/" , $user['name']))) {
+  if (!(preg_match("/川/",$user['name'])
+    || preg_match("/山/", $user['name'])
+    || preg_match("/村/" , $user['name']))) {
     continue;
   }
   
-  if (!(preg_match("/県/" , $user['birth_place']) || preg_match("/京/" , $user['birth_place']))) {
+  if (!(preg_match("/県/", $user['birth_place'])
+    || preg_match("/京/" , $user['birth_place']))) {
     continue;
   }
 
@@ -150,7 +191,11 @@ foreach ($users as $user) {
     continue;
   }
 
-  $nameKawaYamaMura[] = [$user['name'] , $user['birth_place'] , $user['money_in_possession']];
+  $nameKawaYamaMura[] = [
+    $user['name'],
+    $user['birth_place'],
+    $user['money_in_possession']
+  ];
 }
 
 echo "<pre>";

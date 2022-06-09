@@ -16,7 +16,7 @@ foreach ($practice2 as $practice) {
     $january = $practice['month'];
   }
 }
-$januaryNum = array_sum ($january_money);
+$januaryNum = array_sum($january_money);
 
 echo "<pre>";
 echo ($january . "月の貯金額：" . $januaryNum . "円");
@@ -30,7 +30,7 @@ foreach ($practice2 as $practice) {
     $february = $practice['month'];
   }
 }
-$februaryNum = array_sum ($february_money);
+$februaryNum = array_sum($february_money);
  
 echo "<pre>";
 echo ($february . "月の貯金額：" . $februaryNum . "円");
@@ -44,7 +44,7 @@ foreach ($practice2 as $practice) {
     $march = $practice['month'];
   }
 }
-$marchNum = array_sum ($march_money);
+$marchNum = array_sum($march_money);
  
 echo"<pre>";
 echo($march . "月の貯金額：" . $marchNum . "円");
@@ -58,7 +58,7 @@ foreach ($practice2 as $practice) {
     $april = $practice['month'];
   }
  }
-$aprilNum = array_sum ($april_money);
+$aprilNum = array_sum($april_money);
  
 echo"<pre>";
 echo($april . "月の貯金額：" . $aprilNum . "円");

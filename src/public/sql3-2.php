@@ -19,6 +19,7 @@ foreach ($spendings as $spending) {
 }
 
 echo "2月の支出";
+
 foreach ($amount as $key => $value) {
   echo "<pre>";
   echo ($key . ":" . $value);

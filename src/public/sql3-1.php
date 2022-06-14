@@ -6,30 +6,27 @@ $pdo = new PDO("mysql:host=mysql; dbname=tq_quest; charset=utf8", $dbUserName, $
 $sql = "SELECT * FROM spendings";
 $statement = $pdo->prepare($sql);
 $statement->execute();
-$expense1 = $statement->fetchAll(PDO::FETCH_ASSOC);
+$spendings = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-
-$january = [];
 $amount = [];
-foreach ($expense1 as $expense) {
+foreach ($spendings as $spending) {
 
-  if (preg_match("/-01-/", $expense['accrual_date'])) {
-    $january[] = $expense['name'];
-    $amount[] = $expense['amount'];
+  if (preg_match("/-01-/", $spending['accrual_date'])) {
+
+    $amount[$spending['name']] = $spending['amount'];
+
   }
 
 }
 
-echo "1月の支出";
+echo "１月の支出";
 
-for ($i = 0; $i < count($january); $i++);
+foreach ($amount as $key => $value) {
 
-for ($i = 0; $i < count($amount); $i++) {
-  
   echo "<pre>";
-  echo $january[$i] . ":" . $amount[$i];
+  echo ($key . ":" . $value);
   echo "<pre>";
-  
+
 }
 
 ?>

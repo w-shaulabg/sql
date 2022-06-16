@@ -6,17 +6,17 @@ $pdo = new PDO("mysql:host=mysql; dbname=tq_quest; charset=utf8", $dbUserName, $
 $sql = "SELECT * FROM spendings";
 $statement = $pdo->prepare($sql);
 $statement->execute();
-$expense4 = $statement->fetchAll(PDO::FETCH_ASSOC);
+$spendings = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($expense4 as $key => $value) {
-  $expense[$key] = $value['accrual_date'];
+foreach ($spendings as $key => $value) {
+  $spending[$key] = $value['accrual_date'];
 }
 
-array_multisort ($expense, SORT_ASC, $expense4);
+array_multisort ($spending, SORT_ASC, $spendings);
 
 echo "日付順にsortして一覧表示" . "\n";
 
-foreach ($expense4 as $key => $value) {
+foreach ($spendings as $key => $value) {
   echo "<pre>";
   echo ($value['name'] . ":" . $value['amount']);
   echo "<pre>";

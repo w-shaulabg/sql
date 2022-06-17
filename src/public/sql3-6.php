@@ -16,7 +16,7 @@ sort($descending_order);
 
 echo "収入の低い順" . "\n";
 
-for($i = 0; $i < count($descending_order); $i++) {
+for ($i = 0; $i < count($descending_order); $i++) {
   echo "<pre>"; 
   echo($descending_order[$i]);
   echo "<pre>";

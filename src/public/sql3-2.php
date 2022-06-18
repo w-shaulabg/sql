@@ -11,11 +11,9 @@ $spendings = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $amount = [];
 foreach ($spendings as $spending) {
-
   if (preg_match("/-02-/", $spending['accrual_date'])) {
     $amount[$spending['name']] = $spending['amount'];
   }
-
 }
 
 echo "2月の支出";

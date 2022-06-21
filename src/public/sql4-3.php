@@ -15,8 +15,8 @@ foreach ($incomes as $income) {
     }
 }
 
-$april_amount = array_sum($amount);
+$june_amount = array_sum($amount);
 
-echo "6月の収入の合計:" . $april_amount;
+echo "6月の収入の合計:" . $june_amount;
 
 ?>

@@ -12,7 +12,7 @@ $amount = [];
 foreach ($incomes as $income) {
   if (preg_match('/-04-/', $income['accrual_date'])) {
     $amount[] = $income['amount'];
-    }
+  }
 }
 
 $april_amount = array_sum($amount);

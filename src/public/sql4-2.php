@@ -12,7 +12,7 @@ $amount = [];
 foreach ($incomes as $income) {
   if (preg_match('/-05-/', $income['accrual_date'])) {
     $amount[] = $income['amount'];
-    }
+  }
 }
 
 $may_amount = array_sum($amount);

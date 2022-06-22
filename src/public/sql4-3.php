@@ -12,7 +12,7 @@ $amount = [];
 foreach ($incomes as $income) {
   if (preg_match('/-06-/', $income['accrual_date'])) {
     $amount[] = $income['amount'];
-    }
+  }
 }
 
 $june_amount = array_sum($amount);

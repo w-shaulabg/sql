@@ -9,6 +9,7 @@ $statement->execute();
 $incomes = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $amount = [];
+$month = [];
 foreach ($incomes as $income) {
   $date = explode("-", $income['accrual_date']);
   $month = abs($date[1]);     //絶対値01⇨１

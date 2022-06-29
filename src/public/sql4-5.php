@@ -18,7 +18,7 @@ foreach ($incomes as $income) {
 
 arsort($amount);
 
-echo "月順にsortして月ごとの収入の合計を一覧表示";
+echo "収入の高い順にsortして月ごとの収入の合計を一覧表示";
 
 foreach ($amount as $mon => $total_amount) {
   echo "<pre>";

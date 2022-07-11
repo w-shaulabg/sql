@@ -9,7 +9,7 @@ $statement->execute();
 $spendings = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $amount = [];
-$month = [];
+$month = 0;
 foreach ($spendings as $spending) {
   $date = explode("-", $spending['accrual_date']);
   $month = abs($date[1]);

@@ -20,6 +20,8 @@ for ($i = 1 ; $i < count($amount); $i++) {
   $amountDifference[$i] = abs($amount[$i] - $amount[$i+1]);
 }
 
+echo "前月との収入の差分を一覧表示してください。";
+
 foreach ($amountDifference as $month => $difference) {
   $month_forward = $month;
   $month_backward = $month + 1;

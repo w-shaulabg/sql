@@ -24,7 +24,7 @@ foreach ($spendings as $spending) {
   $amount[$month] += $spending['amount'];
 }
 
-echo "月順にsortして月ごとの支出の合計を一覧表示。ただし、支出日に5が含まれている時だけ1500円引いてください";
+echo "月順にsortして月ごとの支出の合計を一覧表示。ただし、支出日に5が含まれている時だけ1500円引いてください。";
 
 foreach ($amount as $mon => $total_amount) {
   echo "<pre>";

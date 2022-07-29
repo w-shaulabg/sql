@@ -1,4 +1,4 @@
 <?php
 echo 'Welcome TECH QUEST!';
-echo 'Welcome Miwaza!';
+echo 'Welcome to Miwaza!';
 ?>

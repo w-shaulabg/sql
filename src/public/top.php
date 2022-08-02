@@ -1,2 +1,2 @@
 <?php
-echo 'Github';
+echo 'Git';

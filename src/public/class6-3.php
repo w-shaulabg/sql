@@ -13,20 +13,20 @@ class Cat
 	
 	public function introduction()
 	{
-	    $catName = $this->name();
-	    $catAge = $this->age();
-		  echo "猫の名前は" . $catName . "です". "<br/>";
-		  echo "猫の年齢は" . $catAge. "歳です";
+		$catName = $this->name();
+		$catAge = $this->age();
+		echo "猫の名前は" . $catName . "です". "<br/>";
+		echo "猫の年齢は" . $catAge. "歳です";
 	}
 	
 	private function name()
 	{
-	  return $this->name;
+		return $this->name;
 	}
 	
 	private function age()
 	{
-	  return $this->age;
+		return $this->age;
 	}
 }
 

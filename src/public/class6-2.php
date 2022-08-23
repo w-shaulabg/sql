@@ -11,7 +11,7 @@ class Cat
 	
 	public function introduction()
 	{
-	  $catName = $this->name();
+		$catName = $this->name();
 		echo "猫の名前は" . $catName . "です";
 	}
 	

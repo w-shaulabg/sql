@@ -10,7 +10,7 @@ class Calculation
 
 	public function output()
 	{
-	  $output = $this->addTwo();
+		$output = $this->addTwo();
 		return $output;
 	}
 
